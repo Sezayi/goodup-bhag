@@ -74,9 +74,7 @@ function App() {
         <animated.div className="title-container" style={subprops}>
           # people acting upon their purpose
         </animated.div>
-        <animated.div className="subtitle-container">
-          {spring.val.interpolate(val => Math.floor(val))}
-        </animated.div>
+        <animated.div className="subtitle-container">{spring.val.interpolate(val => Math.floor(val))}</animated.div>
         <animated.div className="explanation-container" style={subprops}>
           "Only" <strong>{formatNumber(1000000000 - value)}</strong> to go.
           Let's make it happen together!
