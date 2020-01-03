@@ -1,13 +1,40 @@
 body {
   margin: 0;
+  background-color: #291e50;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  }
+
+  @font-face {
+    font-family: "Edmondsans";
+    src: url("./fonts/Edmondsans-Regular.otf");
+    font-display: auto;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Edmondsans-medium";
+    src: url("./fonts/Edmondsans-Medium.otf");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+
+h1 {
+  font-family: "Edmondsans-medium";
+  font-size: 4em;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  font-family: "Edmondsans";
+  font-size: 10em;
+  color: #3c96dc;
+  text-align: center;
+  line-height: 1em;
 }

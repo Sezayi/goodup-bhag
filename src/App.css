@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+.body {
+  background-color: #291e50;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 8.3%);
+  grid-template-rows: repeat(12, 1fr);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.title-container {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 6;
+  grid-row-end: 7; 
+}
+
+.subtitle-container {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 7;
+  grid-row-end: 8; 
+}
+
+.explanation-container {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 8;
+  grid-row-end: 9; 
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  .title-container {
+    font-family: "Edmondsans";
+    font-size: 4em;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .subtitle-container {
+    font-family: "Edmondsans-medium";
+    font-size: 10em;
+    color: #3c96dc;
+    text-align: center;
+    line-height: 1em;
+    letter-spacing: 12px;
+    margin-bottom: 40px;
+  }
+  .explanation-container {
+    font-family: "Edmondsans";
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .title-container {
+    font-family: "Edmondsans-medium";
+    font-size: 2em;
+    line-height: 1.5em;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+  }
+  .subtitle-container {
+    font-family: "Edmondsans-medium";
+    font-size: 4em;
+    color: #3c96dc;
+    text-align: center;
+    line-height: 2em;
+  }
+  .explanation-container {
+    font-family: "Edmondsans";
+    font-size: 1em;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1em;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+
+.bhag-container {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 7;
+  grid-row-end: 8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.earth-container {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  padding-right: 4em;
+}
+
+/* .earth {
+  width: 100%
+} */
+
+.spaceship-container {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.sdgs-container {
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
+
+.sdgs {
+  width:16em;
+}
+
+.moon-container {
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 8;
+  grid-row-end: 10;
+}
+
+/* .moon {
+  width: 80%;
+} */
+
+.monster-container {
+  grid-column-start: 10;
+  grid-column-end: 10;
+  grid-row-start: 8;
+  grid-row-end: 8;
+}
+
+.monster {
+  margin-top: -2em;
+  margin-left: 2em;
+}
+
+.ufo-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+
+/* .ufo {
+  width: 100%
+} */
+
+.stars-container {
+  grid-column-start: 8;
+  grid-column-end: 10;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+.stars-container-2 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+
+.stars-container-3 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+
+.stars-container-4 {
+  grid-column-start: 9;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.stars-container-5 {
+  grid-column-start: 12;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.stars-container-6 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  margin-left: 3rem;
 }

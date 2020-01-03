@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="156px" height="92px" viewBox="0 0 156 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Circle-icons-ufo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="GoodUp-Website-Designs-1600px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="impact.goodup.com" transform="translate(-117.000000, -757.000000)">
+            <g id="Circle-icons-ufo" transform="translate(191.500000, 800.500000) rotate(-17.000000) translate(-191.500000, -800.500000) translate(111.000000, 757.000000)">
+                <path d="M160.115024,60 C160.115024,66.625 124.452189,86.5 80.1236188,86.5 C35.7950484,86.5 0.132213641,66.625 0.132213641,60 C0.132213641,58.6495313 -0.771335108,53.3640015 2.14566918,50.3154663 C5.06267346,47.2669312 45.8351907,33.5 80.1236188,33.5 C116.66615,33.5 151.575577,45.7866577 156.862769,49.2182007 C162.149962,52.6497437 160.115024,58.8945418 160.115024,60 Z" id="Shape" fill="#535353" fill-rule="nonzero" opacity="0.797950634"></path>
+                <path d="M160.5,53 C160.5,59.625 124.833333,79.5 80.5,79.5 C36.1666667,79.5 0.5,59.625 0.5,53 C0.5,47.0375 36.1666667,26.5 80.5,26.5 C124.833333,26.5 160.5,46.70625 160.5,53 Z" id="Shape" fill="#CACACA" fill-rule="nonzero"></path>
+                <path d="M112,38.1666667 C112,55.5 97.9631579,56.5 80.25,56.5 C62.5368421,56.5 48.5,55.5 48.5,38.1666667 C48.5,20.8333333 62.8710526,6.5 80.25,6.5 C97.6289474,6.5 112,20.5 112,38.1666667 Z" id="Shape" fill="#231F20" fill-rule="nonzero" opacity="0.2"></path>
+                <path d="M112,31.6666667 C112,49 97.9631579,50 80.25,50 C62.5368421,50 48.5,49 48.5,31.6666667 C48.5,14.3333333 62.8710526,0 80.25,0 C97.6289474,0 112,14 112,31.6666667 Z" id="Shape" fill="#3C96DC" fill-rule="nonzero"></path>
+                <text id="up" font-family="Edmondsans-Bold, Edmondsans" font-size="25" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="64.5" y="33">up</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
