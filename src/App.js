@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./App.css";
-import { useSpring, animated, config } from "react-spring";
+import { useSpring, animated } from "react-spring";
 
 import earth from "./images/earth.svg";
 import moon from "./images/moon.svg";
@@ -11,11 +11,8 @@ import spaceship from "./images/spaceship.svg";
 import star from "./images/star.svg";
 import sdgs from "./images/sdgs.png";
 
-
-
 function App() {
-
-  const value = 2341223
+  const value = 2341223;
 
   const spring = useSpring({
     config: { duration: 2000 },
@@ -24,7 +21,7 @@ function App() {
   });
 
   const subprops = useSpring({
-    config: {duration: 1000},
+    config: { duration: 1000 },
     to: [{ opacity: 1, color: "#ffffff" }],
     from: { opacity: 0, color: "#291e50" }
   });
@@ -56,7 +53,7 @@ function App() {
   }));
 
   function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
   }
 
   return (
@@ -65,23 +62,31 @@ function App() {
         className="container"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
       >
-        <animated.div
-          className="earth-container">
+        <div className="earth-container">
           <img className="earth" src={earth}></img>
-        </animated.div>
+        </div>
+        <div className="moon-container">
+          <img className="moon" src={moon}></img>
+        </div>
+        <div className="monster-container">
+          <img className="monster" src={monster}></img>
+        </div>
         <animated.div className="title-container" style={subprops}>
           # people acting upon their purpose
         </animated.div>
         <animated.div className="subtitle-container">
           {spring.val.interpolate(val => Math.floor(val))}
-        </animated.div> 
+        </animated.div>
         <animated.div className="explanation-container" style={subprops}>
-          "Only" <strong>{formatNumber(1000000000 - value)}</strong> to go. Let's make it happen together!
+          "Only" <strong>{formatNumber(1000000000 - value)}</strong> to go.
+          Let's make it happen together!
         </animated.div>
         <animated.div
           className="spaceship-container"
           style={{ transform: props.xy.interpolate(trans4) }}
-        > <img className="spaceship" src={spaceship}></img>
+        >
+          {" "}
+          <img className="spaceship" src={spaceship}></img>
         </animated.div>
         <animated.div
           className="sdgs-container"
@@ -91,13 +96,6 @@ function App() {
         >
           <img className="sdgs" src={sdgs}></img>
         </animated.div>
-        
-        <animated.div className="moon-container">
-          <img className="moon" src={moon}></img>
-        </animated.div>
-        <div className="monster-container">
-        <img className="monster" src={monster} ></img>
-      </div>
         <animated.div className="ufo-container">
           <img className="ufo" src={ufo}></img>
         </animated.div>

@@ -67,12 +67,12 @@
   }
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+/* If the screen size is 600px wide or less */
 @media screen and (max-width: 600px) {
   .title-container {
-    font-family: "Edmondsans-medium";
-    font-size: 2em;
-    line-height: 1.5em;
+    font-family: "Edmondsans";
+    font-size: 3em;
+    line-height: 1em;
     font-weight: 500;
     color: #ffffff;
     text-align: center;
@@ -91,15 +91,20 @@
     text-align: center;
     line-height: 1.6em;
   }
+
   .sdgs {
     display: none;
   }
-
   .spaceship {
     display: none;
   }
+  .moon {
+    display: none;
+  }
+  .monster {
+    display: none;
+  }
 }
-
 
 .bhag-container {
   grid-column-start: 4;
