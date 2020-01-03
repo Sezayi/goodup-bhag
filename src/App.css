@@ -9,6 +9,13 @@
   grid-template-rows: repeat(12, 1fr);
 }
 
+.earth-container {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  padding-right: 4em;
+}
 .title-container {
   grid-column-start: 4;
   grid-column-end: 10;
@@ -30,8 +37,10 @@
   grid-row-end: 9; 
 }
 
+
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 601px) {
+  
   .title-container {
     font-family: "Edmondsans";
     font-size: 4em;
@@ -80,7 +89,14 @@
     font-size: 1em;
     color: #ffffff;
     text-align: center;
-    line-height: 1em;
+    line-height: 1.6em;
+  }
+  .sdgs {
+    display: none;
+  }
+
+  .spaceship {
+    display: none;
   }
 }
 
@@ -91,18 +107,6 @@
   grid-row-start: 7;
   grid-row-end: 8;
 }
-
-.earth-container {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 5;
-  padding-right: 4em;
-}
-
-/* .earth {
-  width: 100%
-} */
 
 .spaceship-container {
   grid-column-start: 7;
@@ -129,10 +133,6 @@
   grid-row-end: 10;
 }
 
-/* .moon {
-  width: 80%;
-} */
-
 .monster-container {
   grid-column-start: 10;
   grid-column-end: 10;
@@ -151,10 +151,6 @@
   grid-row-start: 9;
   grid-row-end: 11;
 }
-
-/* .ufo {
-  width: 100%
-} */
 
 .stars-container {
   grid-column-start: 8;
