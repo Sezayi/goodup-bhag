@@ -70,7 +70,7 @@ function App() {
           <img className="earth" src={earth}></img>
         </animated.div>
         <animated.div className="title-container" style={subprops}>
-          # people living up to their purpose
+          # people acting upon their purpose
         </animated.div>
         <animated.div className="subtitle-container">
           {spring.val.interpolate(val => Math.floor(val))}
