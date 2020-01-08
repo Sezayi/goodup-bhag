@@ -12,7 +12,7 @@ import star from "./images/star.svg";
 import sdgs from "./images/sdgs.png";
 
 function App() {
-  const value = 77288;
+  const value = 152247;
 
   const spring = useSpring({
     config: { duration: 2000 },
