@@ -11,6 +11,7 @@ import monster from "./images/monster.svg";
 import spaceship from "./images/spaceship.svg";
 import star from "./images/star.svg";
 import sdgs from "./images/sdgs.png";
+import powered from "./images/powered-icon.svg"
 
 function App() {
   const value = 152247;
@@ -91,6 +92,11 @@ function App() {
         <animated.div className="explanation-container" style={subprops}>
           "Only" <strong>{formatNumber(1000000000 - value)}</strong> to go.
           Let's make it happen together!
+        </animated.div>
+        <animated.div className="poweredby-container">
+          <img className="powered"
+          src={powered}></img>
+          Powered by <a href="https://www.goodup.com">GoodUp</a> technology
         </animated.div>
         <animated.div
           className="spaceship-container"

@@ -37,6 +37,14 @@
   grid-row-end: 9; 
 }
 
+.poweredby-container {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 12;
+  grid-row-end: 12; 
+}
+
+
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 601px) {
@@ -61,6 +69,13 @@
   .explanation-container {
     font-family: "Edmondsans";
     font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.5em;
+  }
+  .poweredby-container {
+    font-family: "Edmondsans";
+    font-size: 1em;
     color: #ffffff;
     text-align: center;
     line-height: 1.5em;
@@ -90,6 +105,16 @@
     color: #ffffff;
     text-align: center;
     line-height: 1.6em;
+  }
+  .poweredby-container {
+    font-family: "Edmondsans";
+    font-size: 1em;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.5em;
+  }
+  .stars-container-2 {
+    display: none;
   }
 
   .sdgs {
@@ -171,15 +196,16 @@
 .stars-container-2 {
   grid-column-start: 4;
   grid-column-end: 5;
-  grid-row-start: 11;
-  grid-row-end: 12;
+  grid-row-start: 10;
+  grid-row-end: 10;
 }
 
 .stars-container-3 {
   grid-column-start: 6;
   grid-column-end: 7;
-  grid-row-start: 11;
-  grid-row-end: 12;
+  grid-row-start: 10;
+  grid-row-end: 10;
+  margin-top: 1em;
 }
 
 .stars-container-4 {
@@ -202,4 +228,9 @@
   grid-row-start: 2;
   grid-row-end: 4;
   margin-left: 3rem;
+}
+
+.powered {
+  width: 12px;
+  margin-right: 8px;
 }
