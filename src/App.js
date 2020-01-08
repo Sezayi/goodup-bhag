@@ -67,11 +67,11 @@ function App() {
   }));
 
   function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   }
 
   return (
-    <>
+    <>  
       <div
         className="container"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
