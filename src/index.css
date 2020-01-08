@@ -21,10 +21,16 @@ body {
     font-style: normal;
     font-weight: 500;
   }
-
+  @font-face {
+    font-family: "Edmondsans-bold";
+    src: url("./fonts/Edmondsans-Bold.otf");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+  }
 
 h1 {
-  font-family: "Edmondsans-medium";
+  font-family: "Edmondsans-bold";
   font-size: 4em;
   font-weight: 500;
   color: #ffffff;
@@ -34,6 +40,14 @@ h1 {
 h2 {
   font-family: "Edmondsans";
   font-size: 10em;
+  color: #3c96dc;
+  text-align: center;
+  line-height: 1em;
+}
+
+h3 {
+  font-family: "Edmondsans-bold";
+  font-size: 2em;
   color: #3c96dc;
   text-align: center;
   line-height: 1em;

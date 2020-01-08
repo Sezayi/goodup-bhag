@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./App.css";
+import './index.css';
 import { useSpring, animated } from "react-spring";
 
 import earth from "./images/earth.svg";
@@ -35,6 +36,18 @@ function App() {
       rotateZ: 360
     }
   });
+ 
+  const interp = r => `rotate(10deg) translate3d(0, ${15 * Math.sin(r + (2 * Math.PI) / 1.6)}px, 0)`
+
+  const { radians } = useSpring({
+    to: async next => {
+      while (1) await next({ radians: 2 * Math.PI })
+    },
+    from: { radians: 0 },
+    config: { duration: 3500 },
+    reset: true,
+  })
+ 
 
   const calc = (x, y) => [
     x - window.innerWidth / 2,
@@ -94,7 +107,7 @@ function App() {
         >
           <img className="sdgs" src={sdgs}></img>
         </animated.div>
-        <animated.div className="ufo-container">
+        <animated.div className="ufo-container" style={{ transform: radians.interpolate(interp)}}>
           <img className="ufo" src={ufo}></img>
         </animated.div>
         <animated.div
@@ -122,7 +135,7 @@ function App() {
           <img className="star" src={star}></img>
         </animated.div>
         <animated.div
-          className="stars-container-5"
+          className="stars-container-5 svg"
           style={{ transform: props.xy.interpolate(trans2) }}
         >
           <img className="star" src={star}></img>
