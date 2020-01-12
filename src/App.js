@@ -3,6 +3,8 @@ import React from "react";
 import "./App.css";
 import './index.css';
 import { useSpring, animated } from "react-spring";
+import { useCountUp } from 'react-countup';
+
 
 import earth from "./images/earth.svg";
 import moon from "./images/moon.svg";
@@ -15,6 +17,14 @@ import powered from "./images/powered-icon.svg"
 
 function App() {
   const value = 152247;
+
+  const { countUp } = useCountUp({
+    start: 0,
+    end: 152247,
+    delay: 0,
+    duration: 2,
+    separator: '.'
+  });
 
   const spring = useSpring({
     config: { duration: 2000 },
@@ -88,7 +98,7 @@ function App() {
         <animated.div className="title-container" style={subprops}>
           # people acting upon their purpose
         </animated.div>
-        <animated.div className="subtitle-container">{spring.val.interpolate(val => Math.floor(val))}</animated.div>
+        <animated.div className="subtitle-container">{countUp}</animated.div>
         <animated.div className="explanation-container" style={subprops}>
           "Only" <strong>{formatNumber(1000000000 - value)}</strong> to go.
           Let's make it happen together!
