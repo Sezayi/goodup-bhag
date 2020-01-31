@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./App.css";
+import './index.css';
 import { useSpring, animated } from "react-spring";
 
 import earth from "./images/earth.svg";
@@ -10,9 +11,10 @@ import monster from "./images/monster.svg";
 import spaceship from "./images/spaceship.svg";
 import star from "./images/star.svg";
 import sdgs from "./images/sdgs.png";
+import powered from "./images/powered-icon.svg"
 
 function App() {
-  const value = 77288;
+  const value = 152247;
 
   const spring = useSpring({
     config: { duration: 2000 },
@@ -35,6 +37,18 @@ function App() {
       rotateZ: 360
     }
   });
+ 
+  const interp = r => `rotate(10deg) translate3d(0, ${15 * Math.sin(r + (2 * Math.PI) / 1.6)}px, 0)`
+
+  const { radians } = useSpring({
+    to: async next => {
+      while (1) await next({ radians: 2 * Math.PI })
+    },
+    from: { radians: 0 },
+    config: { duration: 3500 },
+    reset: true,
+  })
+ 
 
   const calc = (x, y) => [
     x - window.innerWidth / 2,
@@ -53,11 +67,11 @@ function App() {
   }));
 
   function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   }
 
   return (
-    <>
+    <>  
       <div
         className="container"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
@@ -79,6 +93,11 @@ function App() {
           "Only" <strong>{formatNumber(1000000000 - value)}</strong> to go.
           Let's make it happen together!
         </animated.div>
+        <animated.div className="poweredby-container">
+          <img className="powered"
+          src={powered}></img>
+          Powered by <a href="https://www.goodup.com">GoodUp</a> technology
+        </animated.div>
         <animated.div
           className="spaceship-container"
           style={{ transform: props.xy.interpolate(trans4) }}
@@ -94,7 +113,7 @@ function App() {
         >
           <img className="sdgs" src={sdgs}></img>
         </animated.div>
-        <animated.div className="ufo-container">
+        <animated.div className="ufo-container" style={{ transform: radians.interpolate(interp)}}>
           <img className="ufo" src={ufo}></img>
         </animated.div>
         <animated.div
@@ -122,7 +141,7 @@ function App() {
           <img className="star" src={star}></img>
         </animated.div>
         <animated.div
-          className="stars-container-5"
+          className="stars-container-5 svg"
           style={{ transform: props.xy.interpolate(trans2) }}
         >
           <img className="star" src={star}></img>
