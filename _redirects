@@ -1,1 +1,1 @@
-/looker	https://looker.goodup.com
+/looker/*	https://looker.goodup.com/:splat 200
