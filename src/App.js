@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./App.css";
-import './index.css';
+import "./index.css";
 import { useSpring, animated } from "react-spring";
 
+import Counter from "./components/Counter";
 import earth from "./images/earth.svg";
 import moon from "./images/moon.svg";
 import ufo from "./images/ufo.svg";
@@ -11,7 +12,7 @@ import monster from "./images/monster.svg";
 import spaceship from "./images/spaceship.svg";
 import star from "./images/star.svg";
 import sdgs from "./images/sdgs.png";
-import powered from "./images/powered-icon.svg"
+import powered from "./images/powered-icon.svg";
 
 function App() {
   const value = 152247;
@@ -37,18 +38,19 @@ function App() {
       rotateZ: 360
     }
   });
- 
-  const interp = r => `rotate(10deg) translate3d(0, ${15 * Math.sin(r + (2 * Math.PI) / 1.6)}px, 0)`
+
+  const interp = r =>
+    `rotate(10deg) translate3d(0, ${15 *
+      Math.sin(r + (2 * Math.PI) / 1.6)}px, 0)`;
 
   const { radians } = useSpring({
     to: async next => {
-      while (1) await next({ radians: 2 * Math.PI })
+      while (1) await next({ radians: 2 * Math.PI });
     },
     from: { radians: 0 },
     config: { duration: 3500 },
-    reset: true,
-  })
- 
+    reset: true
+  });
 
   const calc = (x, y) => [
     x - window.innerWidth / 2,
@@ -71,7 +73,7 @@ function App() {
   }
 
   return (
-    <>  
+    <>
       <div
         className="container"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
@@ -88,14 +90,9 @@ function App() {
         <animated.div className="title-container" style={subprops}>
           # people acting upon their purpose
         </animated.div>
-        <animated.div className="subtitle-container">{spring.val.interpolate(val => Math.floor(val))}</animated.div>
-        <animated.div className="explanation-container" style={subprops}>
-          "Only" <strong>{formatNumber(1000000000 - value)}</strong> to go.
-          Let's make it happen together!
-        </animated.div>
+        <Counter />
         <animated.div className="poweredby-container">
-          <img className="powered"
-          src={powered}></img>
+          <img className="powered" src={powered}></img>
           Powered by <a href="https://www.goodup.com">GoodUp</a> technology
         </animated.div>
         <animated.div
@@ -113,7 +110,10 @@ function App() {
         >
           <img className="sdgs" src={sdgs}></img>
         </animated.div>
-        <animated.div className="ufo-container" style={{ transform: radians.interpolate(interp)}}>
+        <animated.div
+          className="ufo-container"
+          style={{ transform: radians.interpolate(interp) }}
+        >
           <img className="ufo" src={ufo}></img>
         </animated.div>
         <animated.div
